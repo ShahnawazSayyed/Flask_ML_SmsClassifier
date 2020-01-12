@@ -5,7 +5,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.externals import joblib
 
-# Initialise your name of Flask application as app
+# Initialise your name of Flask application as SpamClassifier
 
 app = Flask(__name__)
 
@@ -59,6 +59,6 @@ def predict():
     return render_template('result.html', prediction=predict_value)
 
 
-# make your app run in 0.0.0.0 host and port 8000
+# make your SpamClassifier run in 0.0.0.0 host and port 8000
 if __name__ == "__main__":
     app.run(debug=True, host='127.0.0.1', port='8000')
